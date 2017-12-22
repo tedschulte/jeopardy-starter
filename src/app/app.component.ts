@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {JeopardyService } from './jeopardy.service';
 
 @Component({
@@ -7,11 +7,11 @@ import {JeopardyService } from './jeopardy.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'app';
-
+  
   questionInfo;
 
   constructor(private jeopardyService: JeopardyService){}
+
 
   getDataFromService(){
     this.jeopardyService.getQuestionInfo()
@@ -26,4 +26,6 @@ export class AppComponent implements OnInit {
     this.getDataFromService()
   }
 
-}
+  
+  }
+
